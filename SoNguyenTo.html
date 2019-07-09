@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+<script>
+    let n=prompt("Nhâp giá trị N=  ");
+    document.write("Các số nguyên tố từ 0---> "+ n + " là :");
+    for(let so=2;so<n;so++){
+        isNguyenTo(so);
+    }
+    function isNguyenTo(so) {
+        let check=false;
+        for(let i=2;i<=Math.sqrt(so);i++) {
+            if (so % i == 0) {
+                check = true;
+            }
+        }
+        if(!check){
+            document.write(so + " ");
+        }
+    }
+
+
+</script>
+</body>
+</html>
